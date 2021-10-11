@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="py-10">
+    <div class="py-3">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="px-6 py-3 bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="mt-4">
@@ -30,14 +30,36 @@
                         y: b,
                         type: 'Scatter'
                     }];
+                    var layout = {
+                        autosize: false,
+                        width: 1168,
+                        height: 325,
+                        margin: {
+                            l: 50,
+                            r: 50,
+                            b: 35,
+                            t: 35,
+                            pad: 4
+                        },
+                        xaxis: {
+                            title: {
+                                text: 'Time',
+                            },
+                        },
+                        yaxis: {
+                            title: {
+                                text: 'Amplitude',
+                            },
+                        },
+                    };
 
-                    Plotly.newPlot('myDiv', data);
+                    Plotly.newPlot('myDiv', data, layout);
                 </script>
             </div>
         </div>
     </div>
 
-    <div class="py-10">
+    <div class="py-3">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="px-6 py-3 bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <!-- <div class="ostat">
