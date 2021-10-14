@@ -127,4 +127,18 @@ class DokterController extends Controller
             return view('dokter.dokter.result', compact('username', 'namafile', 'x', 'y', 'as', 'mr', 'ms', 'mvp', 'n'));
         }
     }
+
+    public function patientProfile($id)
+    {
+        $readpasien = Pasien::where('user_id', $id)->get();
+        $user = User::where('id', $id)->firstOrfail();
+        $user_id = $user->id;
+        return view('dokter.dokter.pasien', compact('readpasien', 'user_id'));
+    }
+    public function detailPatient($id)
+    {
+        $user = User::where('id', $id)->firstOrfail();
+        $user_id = $user->id;
+        return view('dokter.dokter.details', compact('user_id'));
+    }
 }
