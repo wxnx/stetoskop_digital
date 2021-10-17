@@ -21,9 +21,5 @@
         "postcss-import": "^14.0.1",
         "tailwindcss": "^2.2.15"
     },
-    "dependencies": {
-        "chart.js": "^3.4.1",
-        "plotly.js-dist-min": "^2.5.0",
-        "requirejs": "^2.3.6"
-    }
+    "dependencies": {}
 }

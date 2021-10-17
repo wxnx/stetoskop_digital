@@ -141,4 +141,7 @@ class DokterController extends Controller
         $user_id = $user->id;
         return view('dokter.dokter.details', compact('user_id'));
     }
+    public function addDetails($id){
+        
+    }
 }
