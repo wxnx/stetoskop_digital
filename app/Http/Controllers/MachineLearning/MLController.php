@@ -24,7 +24,7 @@ class MLController extends Controller
         if (Storage::disk('public')->exists("uploads/$request->name")) {
             $data = Storage::disk('public')->path("uploads/$request->name");
             $model = 'C:\xampp\htdocs\stetoskop_digital\model.tflite';
-            $python = 'C:/Users/winoramaputra/AppData/Local/Programs/Python/Python38/python.exe';
+            $python = 'C:/Users/WINORA~1/AppData/Local/Programs/Python/Python38/python.exe';
             $script = escapeshellcmd(base_path('/ml_scrypt.py'));
             $command = "$python $script $data $model";
             ob_start();
@@ -89,7 +89,7 @@ class MLController extends Controller
         if (Storage::disk('public')->exists("uploads/$readpasien->name")) {
             $data = Storage::disk('public')->path("uploads/$readpasien->name");
             $model = 'C:\xampp\htdocs\stetoskop_digital\model.tflite';
-            $python = 'C:/Users/winoramaputra/AppData/Local/Programs/Python/Python38/python.exe';
+            $python = 'C:/Users/WINORA~1/AppData/Local/Programs/Python/Python38/python.exe';
             $script = escapeshellcmd(base_path('/ml_scrypt.py'));
             $command = "$python $script $data $model";
             ob_start();

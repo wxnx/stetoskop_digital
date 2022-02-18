@@ -74,7 +74,7 @@ class DokterController extends Controller
         $readpasien = MachineLearning::where('id', $id)->firstOrfail();
         if (Storage::disk('public')->exists("uploads/$readpasien->name")) {
             $data = Storage::disk('public')->path("uploads/$readpasien->name");
-            $python = 'C:/Users/winoramaputra/AppData/Local/Programs/Python/Python38/python.exe';
+            $python = 'C:/Users/WINORA~1/AppData/Local/Programs/Python/Python38/python.exe';
             $script = escapeshellcmd(base_path('/graph.py'));
             $command = "$python $script $data";
             ob_start();
